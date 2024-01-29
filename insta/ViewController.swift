@@ -129,7 +129,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
         super.viewDidLoad()
   
         // Assign tags and configure gesture recognizers for image views
-
             imageA.tag = 0
             imageB.tag = 1
             imageC.tag = 2
@@ -138,6 +137,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
            configureImageView(imageB)
            configureImageView(imageC)
            configureImageView(imageD)
+           applyLayoutForCurrentTemplate()
+           defaultTemplateButton()
             let swipeUpGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
             swipeUpGesture.direction = .up
             addPicture.addGestureRecognizer(swipeUpGesture)
@@ -147,7 +148,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate & UINavi
             addPicture.addGestureRecognizer(swipeLeftGesture)
         
     }
-    
+    private func defaultTemplateButton() {
+        // Puisque Template1 est le template par défaut
+        if let defaultButton = Template1 {
+                // Ajoutez la sous-vue sélectionnée à ce bouton
+                let selectedImageView = UIImageView(image: UIImage(named: "Selected"))
+                selectedImageView.frame = defaultButton.bounds
+                selectedImageView.tag = 100 // Utiliser le même tag que celui utilisé dans templateButtonPressed
+                defaultButton.addSubview(selectedImageView)
+            }
+    }
     
     @objc func handleSwipe(_ gesture: UISwipeGestureRecognizer) {
         // Animate and share based on the orientation and swipe direction
