@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  insta
+//  instagrid 2
 //
-//  Created by younes ouasmi on 21/01/2024.
+//  Created by younes ouasmi on 15/12/2023.
 //
 
 import UIKit

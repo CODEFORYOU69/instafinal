@@ -13,6 +13,9 @@
 		3E00D6182B5DC37200D70DDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E00D6162B5DC37200D70DDB /* Main.storyboard */; };
 		3E00D61A2B5DC37300D70DDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E00D6192B5DC37300D70DDB /* Assets.xcassets */; };
 		3E00D61D2B5DC37300D70DDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E00D61B2B5DC37300D70DDB /* LaunchScreen.storyboard */; };
+		3E00D6252B5DC42700D70DDB /* modele.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E00D6242B5DC42700D70DDB /* modele.swift */; };
+		3E00D6272B5DC56B00D70DDB /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E00D6262B5DC56B00D70DDB /* Delm-Medium.otf */; };
+		3E00D6292B5DC57300D70DDB /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E00D6282B5DC57300D70DDB /* ThirstySoftRegular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		3E00D6192B5DC37300D70DDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E00D61C2B5DC37300D70DDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E00D61E2B5DC37300D70DDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E00D6242B5DC42700D70DDB /* modele.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = modele.swift; path = ../modele.swift; sourceTree = "<group>"; };
+		3E00D6262B5DC56B00D70DDB /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
+		3E00D6282B5DC57300D70DDB /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				3E00D6192B5DC37300D70DDB /* Assets.xcassets */,
 				3E00D61B2B5DC37300D70DDB /* LaunchScreen.storyboard */,
 				3E00D61E2B5DC37300D70DDB /* Info.plist */,
+				3E00D6242B5DC42700D70DDB /* modele.swift */,
+				3E00D6262B5DC56B00D70DDB /* Delm-Medium.otf */,
+				3E00D6282B5DC57300D70DDB /* ThirstySoftRegular.otf */,
 			);
 			path = insta;
 			sourceTree = "<group>";
@@ -127,6 +136,8 @@
 			files = (
 				3E00D61D2B5DC37300D70DDB /* LaunchScreen.storyboard in Resources */,
 				3E00D61A2B5DC37300D70DDB /* Assets.xcassets in Resources */,
+				3E00D6292B5DC57300D70DDB /* ThirstySoftRegular.otf in Resources */,
+				3E00D6272B5DC56B00D70DDB /* Delm-Medium.otf in Resources */,
 				3E00D6182B5DC37200D70DDB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E00D6152B5DC37200D70DDB /* ViewController.swift in Sources */,
+				3E00D6252B5DC42700D70DDB /* modele.swift in Sources */,
 				3E00D6112B5DC37200D70DDB /* AppDelegate.swift in Sources */,
 				3E00D6132B5DC37200D70DDB /* SceneDelegate.swift in Sources */,
 			);
@@ -290,16 +302,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VRA2ZFJM88;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = insta/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "pour acceder a ta phototeque il faut que tu autorise l'accès";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +320,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.younesouasmi.insta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -318,16 +333,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VRA2ZFJM88;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = insta/Info.plist;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "pour acceder a ta phototeque il faut que tu autorise l'accès";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +351,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.younesouasmi.insta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
