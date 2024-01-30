@@ -7,15 +7,14 @@
 
 import Foundation
 import UIKit
-import LinkPresentation
 
 struct ImageGrid {
     // Holds the array of images for the grid, initially set to nil
     var images: [UIImage?] = Array(repeating: nil, count: 4)
-
+    
     // Current template type for the grid layout
     var currentTemplate: GridTemplate = .template1
-
+    
     // Enum for different grid templates
     enum GridTemplate {
         case template1
@@ -38,7 +37,7 @@ struct ImageGrid {
                 isViewBHidden: true,
                 isViewDHidden: false
             )
-
+            
         case .template2:
             // Calculate widths and hidden states for template2
             let widthC = orientation.isPortrait ? 270 : 216
@@ -51,7 +50,7 @@ struct ImageGrid {
                 isViewBHidden: false,
                 isViewDHidden: true
             )
-
+            
         case .template3:
             // Widths and visibility for template3
             let width = orientation.isPortrait ? 127 : 100
@@ -65,18 +64,18 @@ struct ImageGrid {
             )
         }
     }
-
+    
     // Updates the image at specified index
     mutating func setImage(_ image: UIImage, atIndex index: Int) {
         guard index >= 0 && index < images.count else { return }
         images[index] = image
     }
-
+    
     // Sets the current template for the grid
     mutating func setTemplate(_ template: GridTemplate) {
         currentTemplate = template
     }
-
+    
     // Converts a UIView to an UIImage
     func convertToImage(_ view: UIView) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, true, 0)
@@ -97,23 +96,3 @@ struct LayoutConfiguration {
     var isViewDHidden: Bool
 }
 
-// Custom item source for UIActivityViewController to handle LinkPresentation
-class LinkMetadataItemSource: NSObject, UIActivityItemSource {
-    let metadata: LPLinkMetadata
-
-    init(metadata: LPLinkMetadata) {
-        self.metadata = metadata
-    }
-
-    func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
-        return metadata
-    }
-
-    func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
-        return metadata
-    }
-
-    func activityViewControllerLinkMetadata(_ activityViewController: UIActivityViewController) -> LPLinkMetadata? {
-        return metadata
-    }
-}
